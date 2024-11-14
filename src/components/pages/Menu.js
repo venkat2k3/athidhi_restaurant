@@ -77,7 +77,7 @@ function Menu() {
 
         <div className="box-container">
         <div className="box">
-            <img src="/images/plain-rice.webp" alt="Rices" />
+            <img src="/images/Plane rice 1.jpg" alt="Rices" />
             <div className="content">
             <h3>Plain-Rice</h3>
             <p>Plain rice is a staple food in many cultures around the world. It's made by simply boiling or steaming rice grains</p>
