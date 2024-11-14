@@ -52,7 +52,7 @@ function Home() {
                 >
             <header className="hero">
                 <h1>WELCOME</h1>
-                {/* <p>Your favorite place for delicious food.</p> */}
+                <p>Your favorite place for delicious food.</p>
                 <button className="reserve-button" onClick={() => setIsReservationOpen(true)}>Reserve a Table</button>
             </header>
             </div>

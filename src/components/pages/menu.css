@@ -4,10 +4,6 @@
 }    
 
 
-Link{
-    text-decoration: none;
-}
-
 .heading h1:hover{
     font-weight: 800;
 }
@@ -85,32 +81,12 @@ Link{
         color: #eee;
         padding: 10px 0;
     }
+
+    .name figcaption{
+        font-weight: 600;
+        font-size: 30px;
+    }
     
-    
-
-@media (max-width: 992px) {
-    .gallery .box-container .box {
-        height: 250px;
-        left: 50px;
-    }
-
-    .gallery .box-container .box .content h3 {
-        font-size: 17px;
-    }
-
-    .gallery .box-container .box .content p {
-        font-size: 14px;
-    }
-
-    .btn {
-        padding: 8px 20px;
-        font-size: 14px;
-    }
-    .heading h1{
-        align-items: center;
-    }
-}
-
 @media (max-width: 580px) {
     .hero {
         padding: 25px 10px;
@@ -201,3 +177,4 @@ Link{
 }
 
 
+ 
