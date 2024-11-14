@@ -57,7 +57,7 @@ function Biriyani() {
                 </div><br/><br/>
 
                 <div className="box1">
-                    <img src="/images/Paneer biryani.jpeg" alt="Biryani" />
+                    <img src="/images/Paneer Biryani.jpeg" alt="Biryani" />
                     
                     <div className="content1">
                         <h3>Paneer Biryani</h3>
@@ -68,7 +68,7 @@ function Biriyani() {
                 </div><br/><br/>
 
         <div className="box2">
-                    <img src="/images/Egg biryani.jpeg" alt="Biryani" />
+                    <img src="/images/Egg Biryani.jpeg" alt="Biryani" />
                  
                     <div className="content2">
                         <h3>Egg Biryani</h3>
@@ -79,7 +79,7 @@ function Biriyani() {
                     </div><br/><br/>
 
         <div className="box1">
-                    <img src="/images/vegetable biryani.jpeg" alt="Biryani" />
+                    <img src="/images/vegetable Biryani.jpeg" alt="Biryani" />
                     
                     <div className="content1">
                         <h3>Vegetable Biryani</h3>
@@ -90,7 +90,7 @@ function Biriyani() {
                 </div><br/><br/>
 
                 <div className="box2">
-                    <img src="/images/Prawn biryani.jpeg" alt="Biryani" />
+                    <img src="/images/Prawn Biryani.jpeg" alt="Biryani" />
                  
                     <div className="content2">
                         <h3>Prawns Biryani</h3>
@@ -101,7 +101,7 @@ function Biriyani() {
                     </div><br/><br/>
 
         <div className="box1">
-                    <img src="/images/Fish biryani.jpeg" alt="Biryani" />
+                    <img src="/images/Fish Biryani.jpeg" alt="Biryani" />
                     
                     <div className="content1">
                         <h3>Fish Biryani</h3>
