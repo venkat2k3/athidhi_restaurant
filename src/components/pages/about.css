@@ -1,0 +1,135 @@
+body {
+    background-color: none;
+}
+
+.about-container {
+    background-color: none;
+    padding: 20px;
+    max-width: 1100px;
+    margin-top: 0;
+    margin-left: 75px;
+    margin-right: 30px;
+    border-radius: 25px;
+}
+
+.about-section,
+.team-section {
+    margin-bottom: 40px;
+}
+
+.about-heading,
+.team-heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-description {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 9px 20px;
+    font-size: 19px;
+    color: #666;
+}
+
+.our {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.mission-section,
+.values-section {
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-section img,
+.values-section img {
+    width: 100%;
+    height: 250px; 
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.mission-section:hover,
+.values-section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+}
+
+.mission-description {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+    color: #333;
+}
+
+.values-list li {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #666;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    flex: 1 1 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #FFA500;
+}
+
+.team-member-name {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.team-member-role {
+    font-size: 1.2rem;
+    color: gray;
+}
+
+        /* grid-template-columns: repeat(2, minmax(250px, 1fr));  */
+
+@media (max-width: 600px) {
+    .about-section{
+        align-items: center;
+        align-self: start;
+    }
+    .about-heading,
+    .team-heading {
+        font-size:24px;
+    }
+
+    .about-description,
+    .mission-description {
+        font-size: 12px;
+    }
+
+    .mission-section img,
+    .values-section img {
+        max-width: 120px; 
+    }
+
+    .our {
+        grid-template-columns: 2fr; 
+    }
+}
