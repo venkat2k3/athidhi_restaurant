@@ -79,7 +79,7 @@ function Biriyani() {
                     </div><br/><br/>
 
         <div className="box1">
-                    <img src="/images/vegetable Biryani.jpeg" alt="Biryani" />
+                    <img src="/images/Vegetable Biryani.jpeg" alt="Biryani" />
                     
                     <div className="content1">
                         <h3>Vegetable Biryani</h3>
