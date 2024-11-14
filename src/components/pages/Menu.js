@@ -1,190 +1,126 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './menu.css';
 import { Link } from 'react-router-dom';
 
+const dishes = [
+  {
+    name: "Biryani",
+    description: "Biryani is a popular dish of spiced meat and rice with flavorful spices.",
+    image: "/images/biryani.webp",
+    link: "/Biryani"
+  },
+  {
+    name: "Chicken Curry",
+    description: "Chicken curry is a beloved dish known for its rich, aromatic sauce and tender, comforting flavors.",
+    image: "/images/chicken-curry.webp",
+    link: "/Chickencurry"
+  },
+  {
+    name: "Roti",
+    description: "Roti is a soft, unleavened flatbread made from whole wheat flour, widely enjoyed as a staple in South Asian cuisine.",
+    image: "/images/butter-roti.webp",
+    link: "/Roti"
+  },
+  {
+    name: "Mutton Curry",
+    description: "Mutton curry is a hearty dish with tender pieces of mutton in a rich, spiced gravy.",
+    image: "/images/mutton-curry.webp",
+    link: "/Muttoncurry"
+  },
+  {
+    name: "Fish Curry",
+    description: "It's a flavorful dish made by simmering fish in a rich blend of aromatic spices.",
+    image: "/images/fish-curry.webp",
+    link: "/Fishcurry"
+  },
+  {
+    name: "Nonveg-Starters",
+    description: "Non-vegetarian starters offer a delicious variety of flavors, textures, and spices.",
+    image: "/images/starters.webp",
+    link: "/Nonvegstarters"
+  },
+  {
+    name: "Plain Rice",
+    description: "Plain rice is a staple food made by simply boiling or steaming rice grains.",
+    image: "/images/Plane rice 1.jpg",
+    link: "/Rices"
+  },
+  {
+    name: "Paneer Butter Masala",
+    description: "A rich and creamy curry made with paneer cooked in butter with aromatic spices.",
+    image: "/images/panner.jpg",
+    link: "/Paneeritems"
+  },
+  {
+    name: "Fried Rice",
+    description: "A flavorful dish made by stir-frying cooked rice with vegetables and seasonings.",
+    image: "/images/fried-rice.webp",
+    link: "/FriedRice"
+  },
+  {
+    name: "Veg-Starters",
+    description: "Starters offer a delicious variety of flavors, textures, and spices.",
+    image: "/images/paneer-tikka.webp",
+    link: "/Veg-starters"
+  },
+  {
+    name: "Finger Millet",
+    description: "Finger millet is a nutrient-rich grain known for its high fiber content.",
+    image: "/images/ragi-mudda.webp",
+    link: "/Milletlump"
+  },
+  {
+    name: "Curd Rice",
+    description: "Curd rice is a popular South Indian comfort meal made with soft cooked rice and yogurt.",
+    image: "/images/curd-rice.webp",
+    link: "/Curdrice"
+  }
+];
+
 function Menu() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredDishes = dishes.filter(dish =>
+      dish.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div>
-      <section className="gallery" id="gallery">
-        <u>
-          <h1 className="heading">
-            <h3> N O N - V E G & V E G </h3>
-          </h1>
-        </u>
-        <br /><br />
-        <div className="box-container">
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/biryani.webp" alt="Biryani" />
-            </figure>
-            <div className="content">
-              <h3>Biryani</h3>
-              <p>Biryani is a popular dish of spiced meat and rice with flavorful spices.</p>
-              <Link to="/Biryani" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-            </div>
-            <figcaption>Biryani</figcaption>
-          </div>
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/chicken-curry.webp" alt="ButterChicken" />
-            </figure>
-            <div className="content">
-              <h3>Chicken items</h3>
-              <p>Chicken curry is a beloved dish known for its rich, aromatic sauce and tender, comforting flavors.</p>
-              <Link to="/Chickencurry" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Chicken Curry</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/butter-roti.webp" alt="Roti" />
-            </figure>
-            <div className="content">
-              <h3>Roti</h3>
-              <p>Roti is a soft, unleavened flatbread made from whole wheat flour, widely enjoyed as a staple in South Asian cuisine.</p>
-              <Link to="/Roti" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Roti</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/mutton-curry.webp" alt="MuttonCurry" />
-            </figure>
-            <div className="content">
-              <h3>Mutton Curry</h3>
-              <p>Mutton curry is a hearty dish with tender pieces of mutton in a rich, spiced gravy and a blend of fragrant spices served with rice or roti</p>
-              <Link to="/Muttoncurry" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Mutton Curry</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/fish-curry.webp" alt="FishCurry" />
-            </figure>
-            <div className="content">
-              <h3>Fish Curry</h3>
-              <p>It's a flavorful dish made by simmering fish in a rich, and a blend of aromatic spices, offering a delicious and often tangy complement to rice</p>
-              <Link to="/Fishcurry" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Fish Curry</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/starters.webp" alt="Starters" />
-            </figure>
-            <div className="content">
-              <h3>Nonveg-Starters</h3>
-              <p>Non-vegetarian starters offer a delicious variety of flavors, textures, and spices, perfect for setting the stage for a meal</p>
-              <Link to="/Nonvegstarters" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-        <figcaption>Starters</figcaption>
-        </div>
-        </div>
-        <br /><br />
-        <div className="box-container">
-        <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/Plane rice 1.jpg" alt="Rices" />
-            </figure>
-            <div className="content">
-              <h3>Plain-Rice</h3>
-              <p>Plain rice is a staple food in many cultures around the world. It's made by simply boiling or steaming rice grains</p>
-              <Link to="/Rices" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Plain Rice</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/panner.jpg" alt="Paneeritems" />
-            </figure>
-            <div className="content">
-              <h3>Paneer Butter Masala</h3>
-              <p>A rich and creamy curry made with paneer cooked in butter with aromatic spices.</p>
-              <Link to="/Paneeritems" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Paneer Butter Masala</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/fried-rice.webp" alt="FriedRice" />
-            </figure>
-            <div className="content">
-              <h3>Fried Rice</h3>
-              <p>It's a flavorful dish made by stir-frying cooked rice with vegetables, proteins, and seasonings, often enhanced with sauces or other spices</p>
-              <Link to="/FriedRice" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Fried Rice</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/paneer-tikka.webp" alt="PannerTikka" />
-            </figure>
-            <div className="content">
-              <h3>Veg-Starters</h3>
-              <p>Starters offer a delicious variety of flavors, textures, and spices, perfect for setting the stage for a meal</p>
-              <Link to="/Veg-starters" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Veg Starters</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/ragi-mudda.webp" alt="milletlump" />
-            </figure>
-            <div className="content">
-              <h3>Lump of Finger Millet</h3>
-              <p>Finger millet, also known as ragi, is a nutrient-rich grain, known for its high fiber content, and essential amino acids, making it a staple in many health-conscious diets.</p>
-              <Link to="/Milletlump" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-            </div>
-          </div>
-          <figcaption>Finger Millet</figcaption>
-          </div>
-
-          <div className='name'>
-          <div className="box">
-            <figure>
-              <img src="/images/curd-rice.webp" alt="curdrice" />
-            </figure>
-            <div className="content">
-              <h3>Curd-Rice</h3>
-              <p>Curd rice, also known as yogurt rice, is a popular South Indian comfort meal made with soft cooked rice, mixed yogurt, and tempered with spices.</p>
-              <Link to="/Curdrice" style={{ textDecoration: 'none' }}><button className="btn">See more</button></Link>
-
-            </div>
-            </div>
-            <figcaption>Curd Rice</figcaption>
-          </div>
-          </div>
-      </section>
-    </div>
+      <div>
+          <section className="gallery" id="gallery">
+              <u>
+                  <h1 className="heading">
+                      <h3>N O N - V E G & V E G</h3>
+                  </h1>
+              </u>
+              <input 
+                  type="text" 
+                  placeholder="Search for dishes..." 
+                  value={searchTerm} 
+                  onChange={(e) => setSearchTerm(e.target.value)} 
+                  className="search-input" 
+              />
+              <br /><br />
+              <div className="box-container">
+                  {filteredDishes.map((dish, index) => (
+                      <div className='name' key={index}>
+                          <div className="box">
+                              <figure>
+                                  <img src={dish.image} alt={dish.name} />
+                              </figure>
+                              <div className="content">
+                                  <h3>{dish.name}</h3>
+                                  <p>{dish.description}</p>
+                                  <Link to={dish.link} style={{ textDecoration: 'none' }}>
+                                      <button className="btn">See more</button>
+                                  </Link>
+                              </div>
+                          </div>
+                          <figcaption>{dish.name}</figcaption>
+                      </div>
+                  ))}
+              </div>
+          </section>
+      </div>
   );
 }
 

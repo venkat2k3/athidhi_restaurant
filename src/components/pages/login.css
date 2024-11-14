@@ -148,3 +148,58 @@ button.submit:hover {
     flex-direction: column; 
   }
 }
+
+@media (max-width: 992px) {
+  .login-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  .left-side img {
+    width: 80%;
+    height: auto;
+  }
+
+  .wrapper {
+    padding: 20px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .wrapper {
+    padding: 15px;
+    max-width: 350px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .input-box input {
+    padding: 8px;
+  }
+
+  button.submit {
+    padding: 10px;
+  }
+
+  .gender label {
+    font-size: 14px;
+  }
+}
+
