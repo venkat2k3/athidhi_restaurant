@@ -22,7 +22,7 @@ function Curdrice() {
 
   return (
     <div className="fulldiv">
-      <button className="back-btn" onClick={() => window.history.back()} style={{ fontSize: '10px', top: '80px' }}>
+      <button className="back-btn" onClick={() => window.history.back()} style={{ fontSize: '10px', top: '80px',position:'sticky' }}>
         &#8617;
       </button>
 

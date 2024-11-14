@@ -26,7 +26,7 @@ function Fishcurry() {
          <button
         className="back-btn"
         onClick={handleBack}
-        style={{ fontSize: '10px', top: '80px'}}
+        style={{ fontSize: '10px', top: '80px',position:'sticky'}}
       >
         &#8617;
       </button>
