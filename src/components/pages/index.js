@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './login.css';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navi=useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -11,7 +12,6 @@ function Login() {
   });
   const [errors, setErrors] = useState({});
   const [action, setAction] = useState("REGISTER");
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,14 +47,23 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     if (validateForm()) {
-      alert(`You have successfully ${action === "REGISTER" ? "registered" : "logged in"}.`);
-      navigate('/home'); 
+      if (action === "REGISTER") {
+        alert('Registration successful! Please log in.');
+        toggleAction(); 
+      } else {
+        alert('Login successful!');
+        navi('/Home');
+      }
+    
+      setFormData({ email: '', password: '', contact: '', gender: '' });
+      setErrors({});
     }
   };
 
   const toggleAction = () => {
-    setAction(action === "REGISTER" ? "Login" : "REGISTER");
+    setAction(action === "REGISTER" ? "LOGIN" : "REGISTER");
     setErrors({});
     setFormData({ email: '', password: '', contact: '', gender: '' });
   };

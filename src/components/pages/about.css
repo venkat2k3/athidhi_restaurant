@@ -19,14 +19,14 @@ body {
 
 .about-heading,
 .team-heading {
-    font-size: 3rem;
+    font-size: 48px;
     text-align: center;
     margin-bottom: 30px;
     color: #333;
 }
 
 .about-description {
-    font-size: 1.25rem;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin: 15px 30px;
@@ -43,6 +43,7 @@ body {
 .mission-section,
 .values-section {
     border-radius: 15px;
+    border:1px #666 solid;
     padding: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -63,7 +64,7 @@ body {
 }
 
 .mission-description {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif;
     margin: 15px;
@@ -96,13 +97,13 @@ body {
 }
 
 .team-member-name {
-    font-size: 2rem;
+    font-size: 32px;
     margin: 15px 0;
     color: #333;
 }
 
 .team-member-role {
-    font-size: 1.5rem;
+    font-size: 24px;
     color: gray;
 }
 
@@ -113,12 +114,12 @@ body {
 
     .about-heading,
     .team-heading {
-        font-size: 3.5rem;
+        font-size: 56px;
     }
 
     .about-description,
     .mission-description {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 
     .mission-section img,
@@ -141,11 +142,11 @@ body {
     }
 
     .team-member-name {
-        font-size: 2.5rem;
+        font-size: 40px;
     }
 
     .team-member-role {
-        font-size: 1.4rem;
+        font-size: 23px;
     }
 }
 
@@ -184,11 +185,11 @@ body {
     }
 
     .team-member-name {
-        font-size: 3rem;
+        font-size: 48px;
     }
 
     .team-member-role {
-        font-size: 1.6rem;
+        font-size: 25px;
     }
 }
 
