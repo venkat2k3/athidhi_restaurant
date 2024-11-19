@@ -166,6 +166,7 @@ button[type="button"] {
         max-width: 1200px;
         height: 75vh;
         margin-left: auto;
+        top: 33px;
         margin-right: auto;
         left: 0;
     }
