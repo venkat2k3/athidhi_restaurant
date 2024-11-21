@@ -3,7 +3,7 @@ import './orders.css';
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
-  
+
   useEffect(() => {
     const savedOrders = JSON.parse(localStorage.getItem('cart')) || [];
     setOrders(savedOrders);
@@ -17,6 +17,12 @@ const Orders = () => {
     alert(`With Amount ₹ ${totalPrice} Order has been Placed!`);
   };
 
+  const handleDeleteOrder = (indexToDelete) => {
+    const updatedOrders = orders.filter((_, index) => index !== indexToDelete);
+    setOrders(updatedOrders);
+    localStorage.setItem('cart', JSON.stringify(updatedOrders));
+  };
+
   return (
     <div className="orders-container">
       <h1>Your Selected Items</h1>
@@ -26,6 +32,11 @@ const Orders = () => {
             {orders.map((order, index) => (
               <li key={index}>
                 {order.name} - ₹{order.price.toFixed(2)}
+                <button
+                  onClick={() => handleDeleteOrder(index)}
+                  className="delete-button">
+                  x
+                </button>
               </li>
             ))}
           </ul>
