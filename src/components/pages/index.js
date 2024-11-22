@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './login.css';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const navi=useNavigate();
+  const navi = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -12,6 +12,13 @@ function Login() {
   });
   const [errors, setErrors] = useState({});
   const [action, setAction] = useState("REGISTER");
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem('authToken'); 
+    if (isLoggedIn) {
+      navi('/Home'); 
+    }
+  }, [navi]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,6 +60,7 @@ function Login() {
         alert('Registration successful! Please log in.');
         toggleAction(); 
       } else {
+        localStorage.setItem('authToken', 'sample_token'); 
         alert('Login successful!');
         navi('/Home');
       }
